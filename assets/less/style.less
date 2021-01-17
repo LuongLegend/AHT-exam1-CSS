@@ -3,6 +3,7 @@
  @font-italic: Pacifico;
  @color-primary: black;
  @color-secondary: #8262b5;
+ @color-grey : #6a6b6c;
 
 * {
     padding: 0;
@@ -10,11 +11,27 @@
     box-sizing: border-box;
 }
 html {
+    width: 1920px;
     h1,h2,h3,h4,h5,h6 {
        font-family: @font-heading; 
     }
 }
 
+.mt-30 {
+    margin-top: 30px;
+}
+.ml-30 {
+    margin-right: 30px
+}
+.mr-30 {
+    margin-right: 30px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.pull-right {
+    float: right;
+}
 h1 {
     font-size: 27px;
 }
@@ -44,13 +61,15 @@ p{
     border: none;
     text-decoration: none;  
     min-width: 40px;
-    padding: 8px 16px;
+    padding: 14px 14px 12px 20px; 
     margin: 16px 0; 
     cursor: pointer;
     outline: none;
     display: inline-block;
-
-    .btn--primary {
+    font-family: @font-heading;
+    font-weight: 500;
+    font-size: 12px;
+    &--primary {
         background-color: white;
         color: @color-primary;
         &:hover {
@@ -58,7 +77,7 @@ p{
         }
     }
 
-    .btn--secondary {
+    &--secondary {
         background-color: @color-secondary;
         color: white;
         &:hover {
@@ -75,7 +94,7 @@ header {
     justify-content: space-between;
     height: 80px;
     margin: auto;
-
+    border-bottom: 1px solid #ccc;
     .logo {
         font-family: @font-heading;
         font-size: 20px;
@@ -93,9 +112,10 @@ header {
         display: flex;
         list-style-type: none;
         justify-content: space-around;
-        width: 60%;
-        .top-menu__item {
-            &>a {
+        flex-basis: 45%;
+        margin-left: -125px;
+        &__item {
+            a {
                 text-decoration: none;
                 color: @color-primary;
                 text-transform: uppercase;
@@ -111,9 +131,80 @@ header {
     }
 
     .cart {
-        .cart__icon {
+        &__icon {
             margin-right: 30px;
         }
     }
 }
 
+section {
+    max-width: 1140px;
+    margin: auto;
+    .ads {
+        height: 560px;
+        display: flex;
+        justify-content: space-evenly;
+        img {
+            display: block;
+            width: auto;
+            height: auto;
+        }
+        &__banner-left {
+            flex: 3;
+            position: relative;
+            &__content {
+                position: absolute;
+                top: 215px;
+                right: 90px;
+                text-align: right;
+                &__first-line, &__second-line  {
+                    font-family: @font-heading;
+                    // color: @color-grey;
+                    opacity: .1;
+                    text-transform: uppercase;
+                }
+                &__first-line {
+                    font-weight: bold;
+                    font-size: 80px;
+                }
+                &__second-line {
+                    margin-top: -30px;
+                    font-size: 50px;
+                    font-weight: 400px;
+                }
+                &__third-line {
+                    margin-top: -30px;
+                    font-family: @font-italic;
+                    font-weight: 800;
+                    font-size: 30px;}
+            }
+        }
+        &__banner-right {
+            flex: 1;
+            &__first, &__second {
+                position: relative;
+            }
+            &__content {
+                position: absolute;
+                font-family: @font-heading;
+                font-size: 16px;
+                &.content--first {
+                    top: 80px;
+                    left: 60px;
+                }
+                &.content--second {
+                    top: 100px;
+                    left: 40px;
+                }
+                &__first-line {
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+                &__second-line {
+                    font-weight: 800;
+                    text-transform: uppercase;
+                }
+            } 
+        }
+    }
+}
