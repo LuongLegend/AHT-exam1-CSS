@@ -176,7 +176,6 @@ section {
     &__banner-left {
         flex: 3;
         position: relative;
-
         &__content {
             position: absolute;
             top: 215px;
@@ -251,17 +250,17 @@ section {
 }
 
 .title-section {
-    margin-top: 80px;
-    font-family: @font-heading;
+    padding-top: 80px;
     text-transform: uppercase;
     margin-bottom: 50px;
-
     &::after {
         content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
         font-size: 22px;
         border-bottom: 1px solid @color-secondary;
     }
-
+    &__subname, &__name {
+        font-family: @font-heading;
+    }
     &__subname {
         font-size: 12px;
         letter-spacing: 6px;
@@ -280,6 +279,7 @@ section {
     flex-basis: 25%;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 24px;
     &__item {
         margin-bottom: 50px;
         position: relative;
@@ -321,6 +321,57 @@ section {
             &--last {
                 font-weight: bold;
                 color: @color-secondary;
+            }
+        }
+    }
+}
+.blog {
+    &-background {
+        background: url(/assets/img/news/blog-background.jpg) top / cover no-repeat;
+        min-height: 705px;
+    }
+    &-body {
+        display: flex;
+        max-width: 1140px;
+        flex-basis: calc(100%/3);
+        justify-content:  space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        &__item {
+            &__img {
+                max-width: 360px;
+                max-height: 200px;
+                position: relative;
+                &__date {
+                    position: absolute;
+                    background-color: #a1d1dd;
+                    top: 22px;
+                    left: 20px;
+                    font-family: @font-heading;
+                    color: white;
+                    padding: 6px 5px 4px;
+                    &-body {
+                        max-width: 50px;
+                        max-height: 50px;
+                        padding: 1px 12px;
+                        border: 1px solid white;
+                    }
+                    &-month {
+                        font-size: 14px;
+                    }
+                    &-day {
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &__content {
+                &__title {
+
+                }
+                &__summary {
+
+                }
             }
         }
     }
