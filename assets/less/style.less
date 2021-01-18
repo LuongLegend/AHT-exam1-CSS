@@ -66,7 +66,6 @@ h5 {
 
 p {
     font-family: @font-page;
-    font-size: 19px;
 }
 
 /* button */
@@ -446,6 +445,108 @@ section {
         &--unload {
             font-size: 12px;
             opacity: .3;
+        }
+    }
+}
+
+.footer {
+    background-color: #222222;
+    font-size: 14px;
+    color: @color-grey;
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1140px;
+        color: @color-grey;
+        padding-top: 60px;
+        margin: 0 auto;
+        &__item {
+            position: relative;
+            margin-bottom: 46px;
+            &--bound {
+                max-width: 260px;
+            }
+            &--middle {
+                min-width: 360px;
+            }
+            &-title {
+                color: white;
+                font-size: @font-heading;
+            }
+            &-hr {
+                margin: 25px 0;
+                opacity: .1;
+                border-top: 1px;
+            }
+            &-about {
+                &__content {
+                    opacity: .4;
+                    display: block;
+                    font-family: "Myriad Pro";
+                    line-height: 20px;
+                }
+            }
+            &-social-icon {
+                letter-spacing: 15px;
+                position: absolute;
+                bottom: 0;
+                a {
+                    color: @color-grey;
+                }
+            }
+        }
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        &-list {
+            list-style-type: none;
+            line-height: 25px;
+            &__item {
+                a {
+                    text-decoration: none;  
+                    color: @color-grey;
+                    font-family: @font-page;
+                    &:hover {
+                        color: white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &__address {
+        list-style-type: none;
+        &-content {
+            display: flex;
+            &__icon {
+                display: block;
+                min-width: 30px;
+                margin-top: 6px;  
+            }
+            p {
+                line-height: 25px;
+            }
+        }
+    }
+    &__copyright {
+        max-width: 1140px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        border-top: 1px solid @color-grey;
+        padding: 20px 0 30px 0;
+        &-content {
+            font-family: "Myriad Pro";
+            &__heart {
+                color: red;
+            }
+            &__author {
+                color: white;
+            }
+        }
+        &__payment {
+
         }
     }
 }
