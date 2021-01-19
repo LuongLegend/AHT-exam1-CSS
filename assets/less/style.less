@@ -1,5 +1,7 @@
+@import '../css/font.css';
 @font-heading: Montserrat;
-@font-page: Open Sans;
+@font-page-primary: Myriad Pro;
+@font-page-secondary: Open Sans;
 @font-italic: Pacifico;
 @color-primary: black;
 @color-secondary: #8262b5;
@@ -12,9 +14,16 @@
 }
 
 html {
-    h1, h2, h3, h4, h5, h6 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: @font-heading;
     }
+
     a {
         color: @color-primary;
     }
@@ -44,28 +53,14 @@ html {
     text-align: center;
 }
 
-h1 {
-    font-size: 27px;
-}
-
-h2 {
-    font-size: 22px;
-}
-
-h3 {
-    font-size: 16px;
-}
-
-h4 {
-    font-size: 14px;
-}
-
-h5 {
-    font-size: 13px;
+.hr {
+    opacity: .1;
+    border-top: 1px;
 }
 
 p {
-    font-family: @font-page;
+    font-family: @font-page-primary;
+    font-size: 14px;
 }
 
 /* button */
@@ -94,6 +89,7 @@ p {
     &--secondary {
         background-color: @color-secondary;
         color: white;
+        font-size: 14px;
 
         &:hover {
             background-color: grey;
@@ -112,7 +108,7 @@ header {
     margin: auto;
     border-bottom: 1px solid #ccc;
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 999;
     width: 100%;
 
@@ -122,8 +118,8 @@ header {
         font-weight: 800;
         text-transform: uppercase;
         border: 2px solid black;
-        letter-spacing: 18px;
-        line-height: 40px;
+        letter-spacing: 14px;
+        line-height: 35px;
         height: 40px;
         margin-left: 30px;
         min-width: 160px;
@@ -143,9 +139,8 @@ header {
                 text-transform: uppercase;
                 font-family: @font-heading;
                 font-weight: 800;
-                font-size: 12px;
                 letter-spacing: 1px;
-
+                font-size: 14px;
                 &:hover {
                     color: @color-secondary;
                 }
@@ -155,6 +150,7 @@ header {
 
     .cart {
         &__icon {
+            font-size: 30px;
             margin-right: 30px;
         }
     }
@@ -227,19 +223,18 @@ section {
         &__content {
             position: absolute;
             font-family: @font-heading;
-            font-size: 16px;
-
             &.content--first {
                 top: 80px;
                 left: 60px;
             }
-
+            
             &.content--second {
                 top: 100px;
                 left: 40px;
             }
-
+            
             &__first-line {
+                font-size: 16px;
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 font-weight: 600;
@@ -247,6 +242,7 @@ section {
             }
 
             &__second-line {
+                font-size: 20px;
                 font-weight: 800;
                 text-transform: uppercase;
             }
@@ -265,7 +261,8 @@ section {
         border-bottom: 1px solid @color-secondary;
     }
 
-    &__subname, &__name {
+    &__subname,
+    &__name {
         font-family: @font-heading;
     }
 
@@ -277,11 +274,12 @@ section {
     }
 
     &__name {
-        font-size: 27px;
+        font-size: 24px;
         letter-spacing: 4px;
         font-weight: 800;
     }
 }
+
 .products {
     display: flex;
     flex-basis: 25%;
@@ -307,6 +305,7 @@ section {
 
         &__name {
             display: inline-block;
+            font-size: 14px;
             margin-top: 20px;
             font-family: @font-heading;
             font-weight: 600;
@@ -315,9 +314,9 @@ section {
         }
 
         &__rating-star {
-            font-size: 12px;
+            font-size: 13px;
             line-height: 32px;
-            
+
             &--rated {
                 color: #f8bf2b;
             }
@@ -331,7 +330,7 @@ section {
             font-size: 16px;
 
             &--sale {
-                font-family: "Myriad Pro";
+                //font-family: @font-page-primary;
                 opacity: .5;
                 text-decoration: line-through;
             }
@@ -345,7 +344,7 @@ section {
 }
 
 .blog {
-    
+
     &-background {
         background: url(/assets/img/news/blog-background.jpg) top / cover no-repeat;
         min-height: 705px;
@@ -355,18 +354,21 @@ section {
         display: flex;
         max-width: 1140px;
         flex-basis: calc(100%/3);
-        justify-content:  space-between;
+        justify-content: space-between;
         flex-wrap: wrap;
         margin: 0 auto;
 
         &__item {
             max-width: 360px;
+
             &__img {
                 position: relative;
+
                 img {
                     max-height: 200px;
                     display: block;
                 }
+
                 &__date {
                     position: absolute;
                     background-color: #a1d1dd;
@@ -375,15 +377,14 @@ section {
                     font-family: @font-heading;
                     color: white;
                     padding: 6px 5px 4px;
+
                     &-body {
                         max-width: 50px;
                         max-height: 50px;
                         padding: 1px 12px;
                         border: 1px solid white;
                     }
-                    &-month {
-                        font-size: 14px;
-                    }
+
                     &-day {
                         font-size: 16px;
                         font-weight: bold;
@@ -409,8 +410,6 @@ section {
                 }
 
                 &__summary {
-                    font-size: 14px;
-                    font-family: 'Myriad Pro';
                     opacity: .8;
                     max-width: inherit;
                     line-height: 20px;
@@ -421,7 +420,7 @@ section {
             &__info {
                 background-color: white;
                 border-top: 1px solid rgba(0, 0, 0, 0.3);
-                
+
                 &-item {
                     opacity: 0.4;
                     padding: 20px;
@@ -439,9 +438,11 @@ section {
         margin-top: 30px;
         letter-spacing: 10px;
         color: @color-secondary;
+
         &--loading {
             font-size: 16px;
         }
+
         &--unload {
             font-size: 12px;
             opacity: .3;
@@ -451,7 +452,6 @@ section {
 
 .footer {
     background-color: #222222;
-    font-size: 14px;
     color: @color-grey;
     &__info {
         display: flex;
@@ -460,53 +460,63 @@ section {
         color: @color-grey;
         padding-top: 60px;
         margin: 0 auto;
+
         &__item {
             position: relative;
             margin-bottom: 46px;
+
             &--bound {
                 max-width: 260px;
             }
+
             &--middle {
                 min-width: 360px;
             }
+
             &-title {
                 color: white;
                 font-size: @font-heading;
+                font-size: 16px;
             }
+
             &-hr {
                 margin: 25px 0;
-                opacity: .1;
-                border-top: 1px;
             }
+
             &-about {
                 &__content {
                     opacity: .4;
                     display: block;
-                    font-family: "Myriad Pro";
                     line-height: 20px;
                 }
             }
+
             &-social-icon {
                 letter-spacing: 15px;
                 position: absolute;
                 bottom: 0;
+
                 a {
                     color: @color-grey;
                 }
             }
         }
     }
+
     &__nav {
         display: flex;
         justify-content: space-between;
+
         &-list {
             list-style-type: none;
             line-height: 25px;
+
             &__item {
                 a {
-                    text-decoration: none;  
+                    text-decoration: none;
                     color: @color-grey;
-                    font-family: @font-page;
+                    font-family: @font-page-secondary;
+                    font-size: 14px;
                     &:hover {
                         color: white;
                         text-decoration: underline;
@@ -515,38 +525,44 @@ section {
             }
         }
     }
+
     &__address {
         list-style-type: none;
+
         &-content {
             display: flex;
+
             &__icon {
                 display: block;
                 min-width: 30px;
-                margin-top: 6px;  
+                margin-top: 6px;
             }
+
             p {
                 line-height: 25px;
             }
         }
     }
+
     &__copyright {
         max-width: 1140px;
         display: flex;
         margin: 0 auto;
         justify-content: space-between;
-        border-top: 1px solid @color-grey;
         padding: 20px 0 30px 0;
+
         &-content {
-            font-family: "Myriad Pro";
             &__heart {
                 color: red;
             }
+
             &__author {
                 color: white;
             }
         }
-        &__payment {
 
+        &-payment {
+            font-size: 20px;
         }
     }
 }
