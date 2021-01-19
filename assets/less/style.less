@@ -162,7 +162,6 @@ section {
 }
 
 .ads {
-    height: 560px;
     display: flex;
     justify-content: space-evenly;
     margin-top: 30px + 80px;
@@ -186,7 +185,6 @@ section {
             &__first-line,
             &__second-line {
                 font-family: @font-heading;
-                // color: @color-grey;
                 opacity: .1;
                 text-transform: uppercase;
             }
@@ -224,18 +222,18 @@ section {
             position: absolute;
             font-family: @font-heading;
             &.content--first {
-                top: 80px;
-                left: 60px;
+                top: 83px;
+                left: 58px;
             }
             
             &.content--second {
-                top: 100px;
+                top: 120px;
                 left: 40px;
             }
             
             &__first-line {
                 font-size: 16px;
-                letter-spacing: 1px;
+                letter-spacing: 3px;
                 text-transform: uppercase;
                 font-weight: 600;
                 opacity: .4;
@@ -243,7 +241,7 @@ section {
 
             &__second-line {
                 font-size: 20px;
-                font-weight: 800;
+                font-weight: 700;
                 text-transform: uppercase;
             }
         }
@@ -275,8 +273,9 @@ section {
 
     &__name {
         font-size: 24px;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
         font-weight: 800;
+        margin-top: 5px;
     }
 }
 
@@ -347,7 +346,7 @@ section {
 
     &-background {
         background: url(/assets/img/news/blog-background.jpg) top / cover no-repeat;
-        min-height: 705px;
+        height: 710px;
     }
 
     &-body {
@@ -394,7 +393,7 @@ section {
 
             &__content {
                 background-color: white;
-                padding: 18px 34px 20px 18px;
+                padding: 16px 34px 20px 18px;
 
                 &__title {
                     text-decoration: none;
@@ -437,15 +436,16 @@ section {
         justify-content: center;
         margin-top: 30px;
         letter-spacing: 10px;
-        color: @color-secondary;
-
-        &--loading {
-            font-size: 16px;
-        }
-
-        &--unload {
-            font-size: 12px;
-            opacity: .3;
+        &__item {
+            &--loading {
+                font-size: 16px;
+                color: @color-secondary;
+            }
+    
+            &--unload {
+                font-size: 12px;
+                opacity: .3;
+            }
         }
     }
 }
@@ -460,10 +460,10 @@ section {
         color: @color-grey;
         padding-top: 60px;
         margin: 0 auto;
+        margin-bottom: 40px;
 
         &__item {
             position: relative;
-            margin-bottom: 46px;
 
             &--bound {
                 max-width: 260px;
@@ -476,18 +476,18 @@ section {
             &-title {
                 color: white;
                 font-size: @font-heading;
-                font-size: 16px;
+                font-size: 21px;
             }
 
             &-hr {
-                margin: 25px 0;
+                margin: 22px 0;
             }
 
             &-about {
                 &__content {
-                    opacity: .4;
                     display: block;
-                    line-height: 20px;
+                    line-height: 23px;
+                    color: @color-grey;
                 }
             }
 
@@ -505,12 +505,10 @@ section {
 
     &__nav {
         display: flex;
-        justify-content: space-between;
-
         &-list {
             list-style-type: none;
-            line-height: 25px;
-
+            line-height: 30px;
+            width: 50%;
             &__item {
                 a {
                     text-decoration: none;
@@ -539,7 +537,7 @@ section {
             }
 
             p {
-                line-height: 25px;
+                line-height: 33px;
             }
         }
     }
