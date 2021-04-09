@@ -141,6 +141,7 @@ header {
                 font-weight: 800;
                 letter-spacing: 1px;
                 font-size: 14px;
+
                 &:hover {
                     color: @color-secondary;
                 }
@@ -221,16 +222,17 @@ section {
         &__content {
             position: absolute;
             font-family: @font-heading;
+
             &.content--first {
                 top: 83px;
                 left: 58px;
             }
-            
+
             &.content--second {
                 top: 120px;
                 left: 40px;
             }
-            
+
             &__first-line {
                 font-size: 16px;
                 letter-spacing: 3px;
@@ -436,12 +438,13 @@ section {
         justify-content: center;
         margin-top: 30px;
         letter-spacing: 10px;
+
         &__item {
             &--loading {
                 font-size: 16px;
                 color: @color-secondary;
             }
-    
+
             &--unload {
                 font-size: 12px;
                 opacity: .3;
@@ -453,6 +456,7 @@ section {
 .footer {
     background-color: #222222;
     color: @color-grey;
+
     &__info {
         display: flex;
         justify-content: space-between;
@@ -505,16 +509,19 @@ section {
 
     &__nav {
         display: flex;
+
         &-list {
             list-style-type: none;
             line-height: 30px;
             width: 50%;
+
             &__item {
                 a {
                     text-decoration: none;
                     color: @color-grey;
                     font-family: @font-page-secondary;
                     font-size: 14px;
+
                     &:hover {
                         color: white;
                         text-decoration: underline;
@@ -536,9 +543,18 @@ section {
                 margin-top: 6px;
             }
 
-            p {
+            a {
+                text-decoration: none;
+                color: @color-grey;
+                font-family: @font-page-secondary;
+                font-size: 14px;
                 line-height: 33px;
+                &:hover {
+                    color: white;
+                    text-decoration: underline;
+                }
             }
+
         }
     }
 
